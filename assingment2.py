@@ -1,0 +1,6 @@
+tup1=(1,2,3,4,5)
+y=list(tup1)
+y.insert(0,"talha")
+y.insert(4,"shabir")
+y.insert(8,"ahmed")
+print(y)
