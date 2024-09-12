@@ -121,7 +121,7 @@ print(x)
 car["color"]="white"
 print(x)
 """
-
+"""
 prnt = {
     "child1":{
         "name":"ashutosh",
@@ -137,25 +137,53 @@ prnt = {
     }
 }
 print(prnt)
+"""
 
 
 
 
+# Sets.......repeated value in set have not excepable
+"""
+set1={1,2,3,4,5,6}
+# set1.add(9)
+# print(set1,type(set1))
+# print(len(set1)-1)...cheaking lenght and find index
+# set1.discard(8)remove value if there is avalible , if not found so just run a code and not gerate any eror
+set2={8,9,10}
+set1.update(set2)
+print(set1)
+"""
+"""
+set1={1,2,3,"ahmed",5}
+set2={5,6,7,8,9,"ali"}string output have no sequences
+set3=set1.union(set2)
+ print(set3) 
 
-# Sets
-# set1={1,2,3,4,5,6,7,8,9,10}
-# set1.add(11)
-# print=(set1)
+set1={1,2,3,4,5}
+set2={5,6,7,8,9,10}
+# set3=set1|(set2) this sign have also used as Union
+print(set3)
+"""
+"""
+set1={1,2,3,4,5}
+set2={5,6,7,8,9,10}
+# set3=set1.intersection(set2)
+# set3=set1&set2 this sign have also used in used in intersection
+print(set3)
+""" 
 
-
-
-
-
- 
-
-
-
-
+# Loops
+"""
+list=(1,2,3,4,5)
+for x in list:
+    print(x)
+"""
+"""
+for i in range(5)
+print(i)
+if i==3:
+break
+"""
 
 #Iteration or itrables
 #give us the us the value on by one 
@@ -189,10 +217,24 @@ def s(p)
     """
 
 
-# class and Onject
+# class and Object
 
 
 # Numpy
-# import numpy
-# ls=numpy .[1,2,3,4,5,5,6]
+"""
+import numpy as np
+array=np.array([1,2,3,4,5,5,6])
+print(array)
+"""
 
+# import numpy as np
+# arr1=np.array([1,2,3,4,5,])
+
+import numpy as np 
+import matplotlib.pyplot as plt
+import seaborn as sb 
+array1=np.array([2,4,6,8,10,12,14,16,18,20])
+print(array1)
+sb.displot(array1)
+plt.savefig('NumpOutput.jpg')
+plt.show()
