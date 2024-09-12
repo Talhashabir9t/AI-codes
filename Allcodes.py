@@ -83,7 +83,7 @@ lst2=[5,6,7,8,9]
 # del lst1[0] ....we will call index number
 # lst1.remove[1]....there we will call direct number
 # lst1.sort(reverse=True)....resverse sorting
-# lst1.sort()...sorting
+n # lst1.sort()...sorting
 # lst1.pop(0) removing also through index
 print(lst1)
 """
@@ -142,48 +142,31 @@ print(prnt)
 
 
 
-# Sets.......repeated value in set have not excepable
-"""
-set1={1,2,3,4,5,6}
-# set1.add(9)
-# print(set1,type(set1))
-# print(len(set1)-1)...cheaking lenght and find index
-# set1.discard(8)remove value if there is avalible , if not found so just run a code and not gerate any eror
-set2={8,9,10}
-set1.update(set2)
-print(set1)
-"""
-"""
-set1={1,2,3,"ahmed",5}
-set2={5,6,7,8,9,"ali"}string output have no sequences
-set3=set1.union(set2)
- print(set3) 
+# Sets
+# set1={1,2,3,4,5,6,7,8,9,10}
+# set1.add(11)
+# print=(set1)
 
-set1={1,2,3,4,5}
-set2={5,6,7,8,9,10}
-# set3=set1|(set2) this sign have also used as Union
-print(set3)
+
+# while loops + brake 
 """
-"""
-set1={1,2,3,4,5}
-set2={5,6,7,8,9,10}
-# set3=set1.intersection(set2)
-# set3=set1&set2 this sign have also used in used in intersection
-print(set3)
+i=0
+while i<=9:
+ print(i)
+ if i==4:
+  break
+ i+=1
 """ 
 
-# Loops
+# for loop + braKe
 """
-list=(1,2,3,4,5)
-for x in list:
-    print(x)
+Name=['talha','shabir', 'ahmad']
+for x in Name:
+ print(x)
+ if x=='shabir':
+  break
 """
-"""
-for i in range(5)
-print(i)
-if i==3:
-break
-"""
+
 
 #Iteration or itrables
 #give us the us the value on by one 
@@ -217,7 +200,16 @@ def s(p)
     """
 
 
-# class and Object
+# class and Onject
+"""
+class student:
+    def __inite__(self,name,age):
+        self.name=name
+        self.age=age
+p1=student("Talha",23)
+print(p1.name)
+"""
+
 
 
 # Numpy
@@ -226,15 +218,40 @@ import numpy as np
 array=np.array([1,2,3,4,5,5,6])
 print(array)
 """
+"""
+import numpy as np
+arry=np.array([[1,2,3,4,6],[7,9,1,5,9]])
+print(arry)
+# print(arry[2])....print any specific index
+# print(arry[1:5]) ...slicing
+# print(arry[1::]).....slic
+# print(arry[2, 7::])
 
-# import numpy as np
-# arr1=np.array([1,2,3,4,5,])
+# print(arry.shape)finding the shape
+"""
 
-import numpy as np 
+
+# Pandas
+import pandas as pd
+#By applying manual data 
+# calories={"apple":50,"banana":14,"mangoa":16}
+# show=pd.Series(calories)........... for series
+
+# calories={"apple":[50],"banana":[46],"mangoa":[16]}
+# show=pd.DataFrame(calories)............for data frame
+# --------------------------------------------------------------------------
+# by apply data through csv file
+# df=pd.read_csv("test.csv")
+
+# print(df.to_string)
+
+
+
+
+
 import matplotlib.pyplot as plt
-import seaborn as sb 
-array1=np.array([2,4,6,8,10,12,14,16,18,20])
-print(array1)
-sb.displot(array1)
-plt.savefig('NumpOutput.jpg')
+import numpy as  np
+x=np.array([100,200,300,400,450])
+y=np.array([1,2,3,4,5])
+plt.plot(x,y)
 plt.show()

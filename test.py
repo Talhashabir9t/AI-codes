@@ -14,5 +14,5 @@ mydataset={
 'model':[19,12,20],
 "varient":["red","yellow","pink"]
 }
-mycars=pd.DataFrame(mydataset)
+mycars=pd.Series(mydataset)
 print(mycars)
