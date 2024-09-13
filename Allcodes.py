@@ -248,10 +248,21 @@ import pandas as pd
 
 
 
+# Matplotlib
+# import matplotlib.pyplot as plt
+"""
+# import numpy as  np
+# x=np.array([100,200,300,400,450])
+# y=np.array([1,2,3,4,5])
+# plt.plot(x,y)
+# plt.show()
+"""
 
-import matplotlib.pyplot as plt
-import numpy as  np
-x=np.array([100,200,300,400,450])
-y=np.array([1,2,3,4,5])
-plt.plot(x,y)
-plt.show()
+import seaborn as sb
+# seaborn plot list
+"""
+sb.displot
+sb.barplot
+sb.histplot
+sb.kdeplot
+"""
