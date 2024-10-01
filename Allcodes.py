@@ -266,3 +266,46 @@ sb.barplot
 sb.histplot
 sb.kdeplot
 """
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Given data
+cakes = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+prices = np.array([100, 150, 250, 300, 400, 450, 600, 800, 1000, 1500, np.nan])  # Missing value
+
+# Remove the missing value for calculations
+valid_prices = prices[~np.isnan(prices)]
+
+# Number of data points
+n = len(cakes) - 1  # excluding the missing value
+
+# Calculate sums
+sum_x = np.sum(cakes)
+sum_y = np.sum(valid_prices)
+sum_xy = np.sum(cakes[:n] * valid_prices)
+sum_x2 = np.sum(cakes**2)
+
+# Calculate slope (m) and intercept (b)
+m = (n * sum_xy - sum_x * sum_y) / (n * sum_x2 - sum_x**2)
+b = (sum_y - m * sum_x) / n
+
+# Predict the missing price value
+missing_cake_value = cakes[-1]  # Cake value for the missing price
+predicted_price = m * missing_cake_value + b
+
+print(f"Slope (m): {m:.2f}")
+print(f"Intercept (b): {b:.2f}")
+print(f"Predicted Price for Cake 12: ${predicted_price:.2f}")
+
+# Plotting
+plt.scatter(cakes[:-1], valid_prices, color='blue', label='Actual data')
+plt.plot(cakes, m * cakes + b, color='red', linewidth=2, label='Fitted line')
+plt.scatter(cakes[-1], predicted_price, color='green', marker='o', s=100, label='Predicted Price')
+plt.xlabel('Cake (in pounds)')
+plt.ylabel('Price (in dollars)')
+plt.title('Cake Price Prediction')
+plt.legend()
+plt.grid(True)
+plt.show()
